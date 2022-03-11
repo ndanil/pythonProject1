@@ -1,4 +1,6 @@
 import datetime
+import os
+
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from operator import or_
 
@@ -175,6 +177,6 @@ def main():
     api.add_resource(NewsResource.NewsResource, '/api/v2/news/<int:news_id>')
     api.add_resource(NewsResource.NewsListResource, '/api/v2/newsList')
 
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT")))
 
 main()
