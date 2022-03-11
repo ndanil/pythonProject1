@@ -174,6 +174,7 @@ def main():
     app.register_blueprint(news_api.blueprint)
     api.add_resource(NewsResource.NewsResource, '/api/v2/news/<int:news_id>')
     api.add_resource(NewsResource.NewsListResource, '/api/v2/newsList')
-    app.run()
+
+    app.run(host='0.0.0.0', port=5000)
 
 main()
