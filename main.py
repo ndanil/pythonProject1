@@ -3,7 +3,7 @@ from flask_login import LoginManager, login_user, login_required, logout_user, c
 from operator import or_
 
 from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify
-from flask_ngrok import run_with_ngrok
+
 from flask_restful import Api
 
 from data import db_session, news_api, NewsResource
